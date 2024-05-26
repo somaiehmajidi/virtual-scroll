@@ -1,0 +1,15 @@
+<div class="sidebar">
+  <div class="icon" [style.background-color]="color">{{ initials }}</div>
+</div>
+<div class="content">
+  <p class="name">{{ post.title }}</p>
+  <p class="date">{{ post.date | date : 'dd MMM yyyy' }}</p>
+  <p class="message">{{ post.text }}</p>
+  <div *ngIf="post.tags.length" class="tags">
+    <div *ngFor="let t of post?.tags" class="tag">{{ t }}</div>
+  </div>
+</div>
+
+<!-- <ng-template #loadingTemplate>
+  <div>....Loading post</div>
+</ng-template> -->
