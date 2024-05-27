@@ -19,7 +19,7 @@ export class PostVirtualScrollDirective {
   private post: PostModel[] = [];
 
   @Input()
-  set messages(value: PostModel[] | null) {
+  set posts(value: PostModel[] | null) {
     if (value && this.post.length !== value.length) {
       this._scrollStrategy.updatePosts(value);
       this.post = value;

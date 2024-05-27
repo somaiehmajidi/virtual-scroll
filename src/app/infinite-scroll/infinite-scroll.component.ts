@@ -22,6 +22,7 @@ export class InfiniteScrollComponent implements OnInit, OnDestroy {
 
   constructor(private elRef: ElementRef, private renderer: Renderer2) {}
 
+  // while the user scrolls down the list, emit the end reached to handle another APICALL for data
   ngOnInit() {
     const parent = this.elRef.nativeElement.parentElement;
 

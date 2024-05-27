@@ -55,13 +55,9 @@ export class PostVirtualScrollStrategy implements VirtualScrollStrategy {
     this._updateRenderedRange();
   }
 
-  onContentRendered(): void {
-    /** no-op */
-  }
+  onContentRendered(): void {}
 
-  onRenderedOffsetChanged(): void {
-    /** no-op */
-  }
+  onRenderedOffsetChanged(): void {}
 
   scrollToIndex(index: number, behavior: ScrollBehavior): void {
     if (!this._viewport) {
@@ -134,7 +130,7 @@ export class PostVirtualScrollStrategy implements VirtualScrollStrategy {
     return 0;
   }
 
-  // Update the range of rendered messages.
+  // Update the range of rendered posts.
   private _updateRenderedRange() {
     if (!this._viewport) {
       return;

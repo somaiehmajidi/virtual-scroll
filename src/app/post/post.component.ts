@@ -18,6 +18,7 @@ const expand = (char: number) => {
 export class PostComponent {
   @Input() post!: PostModel;
 
+  // get user's name/family initials to use as an avatar
   get initials() {
     return this.post.title
       .split(' ')
@@ -25,6 +26,7 @@ export class PostComponent {
       .join('');
   }
 
+  // generate color rgb code for user avatar
   get color() {
     const c = this.post.title.toUpperCase();
     return `rgb(${expand(c.charCodeAt(0))}, ${expand(

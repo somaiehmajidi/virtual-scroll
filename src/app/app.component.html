@@ -5,7 +5,7 @@
 <section class="viewport" cdkVirtualScrollingElement>
   <cdk-virtual-scroll-viewport
     appVirtualScroll
-    [messages]="postService.posts$ | async"
+    [posts]="postService.posts$ | async"
   >
     <app-post
       *cdkVirtualFor="let post of postService.posts$ | async"
